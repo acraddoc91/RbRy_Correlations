@@ -1,0 +1,4 @@
+#!/bin/bash
+make
+docker build -t acraddoc91/correlations .
+#docker push acraddoc91/correlations
