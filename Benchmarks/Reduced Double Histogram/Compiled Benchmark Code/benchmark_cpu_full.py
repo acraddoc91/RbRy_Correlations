@@ -1,14 +1,15 @@
 from corrLib import g2ToFile_cpu
 import numpy as np
 import time
+import os
 import scipy
 
-mat_directory = "C:/Users/Ryd Berg/Google Drive/Rydberg Experiment/Matlab/CorrelationCalculations/For Sandy/"
-data_directory = "C:/Users/Ryd Berg/Downloads/"
+current_dir = os.getcwd()
+mat_directory = os.path.abspath(current_dir + "/../../Benchmark Results").replace("\\","/") + "/"
+data_folder = os.path.abspath(current_dir + "/../../Benchmark Files").replace("\\","/") + "/"
 
-data_folder = data_directory+"g2_benchmark/"
-mat_file = mat_directory+"g2_benchmark_cpu"
-benchmark_mat = mat_directory+"g2_benchmark_cpu_full_multithread"
+mat_file = mat_directory+"g2_out"
+benchmark_mat = mat_directory+"reduced_double_histogram_cpu_benchmark"
 
 bin_width = 82.3e-12*12
 pulse_spacing = 100e-6
