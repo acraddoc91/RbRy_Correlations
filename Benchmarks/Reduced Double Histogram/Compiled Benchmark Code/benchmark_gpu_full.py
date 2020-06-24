@@ -9,7 +9,7 @@ mat_directory = os.path.abspath(current_dir + "/../../Benchmark Results").replac
 data_folder = os.path.abspath(current_dir + "/../../Benchmark Files").replace("\\","/") + "/"
 
 mat_file = mat_directory+"g2_out"
-benchmark_mat = mat_directory+"reduced_double_histogram_benchmark"
+benchmark_mat = mat_directory+"reduced_double_histogram_two_gpu_benchmark"
 
 bin_width = 82.3e-12*12
 pulse_spacing = 100e-6
