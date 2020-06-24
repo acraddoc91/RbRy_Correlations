@@ -14,7 +14,7 @@ benchmark_mat = mat_directory+"reduced_double_histogram_cpu_benchmark"
 bin_width = 82.3e-12*12
 pulse_spacing = 100e-6
 max_pulse_distance = 4
-half_tau_bins = np.array([1,50,100,250,500,1000,2500,5000])
+half_tau_bins = np.array([1,2,5,10,20,50,100,200,500,1000,2000,5000,10000])
 calc_bins = half_tau_bins * 2 + 1
 time_taken = np.zeros(len(half_tau_bins))
 for i in range(len(half_tau_bins)):

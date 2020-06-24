@@ -29,7 +29,7 @@ const int max_channels = 3;
 const size_t return_size = 3;
 const int file_block_size = 16;
 const double tagger_resolution = 82.3e-12;
-const int num_gpu = 2;
+const int num_gpu = 1;
 const int threads_per_cuda_block_numer = 64;
 const int shared_mem_size = 4;
 

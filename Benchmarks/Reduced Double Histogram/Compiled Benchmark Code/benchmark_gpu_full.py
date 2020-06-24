@@ -14,7 +14,7 @@ benchmark_mat = mat_directory+"reduced_double_histogram_two_gpu_benchmark"
 bin_width = 82.3e-12*12
 pulse_spacing = 100e-6
 max_pulse_distance = 4
-half_tau_bins = np.array([1,100,500,1000,2000,4000,8000,16000,32000,64000,128000,256000])
+half_tau_bins = np.array([1,2,5,10,20,50,100,200,500,1000,2000,5000,10000,20000,50000,100000,200000,500000])
 #half_tau_bins = np.array([16000,32000,64000,128000,256000])
 calc_bins = half_tau_bins * 2 + 1
 time_taken = np.zeros(len(half_tau_bins))
@@ -24,6 +24,6 @@ for i in range(len(half_tau_bins)):
     g2ToFile(data_folder,mat_file,max_time,bin_width,pulse_spacing,max_pulse_distance)
     time_taken[i] = time.time()-start_time
 
-    time.sleep(20)
+    time.sleep(5)
 
 scipy.io.savemat(benchmark_mat,{'num_bins':calc_bins,'time':time_taken})
