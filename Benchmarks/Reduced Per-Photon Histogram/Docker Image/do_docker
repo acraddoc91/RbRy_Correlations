@@ -1,4 +1,4 @@
 #!/bin/bash
 make
-docker build -t correlations_benchmark .
+docker build -t correlations_benchmark . --no-cache
 #docker push acraddoc91/correlations

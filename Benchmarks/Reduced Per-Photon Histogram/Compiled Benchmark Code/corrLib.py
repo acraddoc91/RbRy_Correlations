@@ -11,7 +11,7 @@ tagger_resolution = 82.3e-12*2
 num_gpu = 2
 
 working_directory = os.getcwd()
-lib_name = 'pythonDLLCPU.dll'
+lib_name = 'pythonDLLCPU.so'
 
 def file_list_to_ctypes(file_list,folder):
     len_list = len(file_list)
