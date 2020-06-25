@@ -10,7 +10,7 @@ RUN pip install jupyter_contrib_nbextensions psutil
 COPY corrLib.py /usr/local/lib/python3.6/site-packages/
 COPY run_command.sh /usr/bin/
 COPY dummy_processor.py /
-COPY example_nb.ipynb /
+COPY benchmark_nb.ipynb /
 RUN chmod +x /usr/bin/run_command.sh
 COPY jupyter_config /root/.jupyter
 COPY pythonDLLCPU.so /usr/local/lib/

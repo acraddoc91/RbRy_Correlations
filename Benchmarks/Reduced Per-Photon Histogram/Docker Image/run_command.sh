@@ -1,6 +1,5 @@
 #!/bin/bash
 echo "running"
-mount -t cifs //129.2.116.114/rbry /NAS -o credentials=/home/rbry/auth/NAS_auth
 if [ -n "$1" ]
 then
         if [ "$1" == "command" ]
