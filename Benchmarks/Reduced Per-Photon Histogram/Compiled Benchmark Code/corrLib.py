@@ -35,7 +35,7 @@ def g2ToFile(folder_name,file_out_name,max_time,bin_width,pulse_spacing,max_puls
     lib.getG2Correlations.argtypes = [ctypes.c_char_p * num_files, ctypes.c_int, ctypes.c_double, ctypes.c_double, ctypes.c_double, ctypes.c_int64, ctypes.py_object, ctypes.POINTER(ctypes.c_int), ctypes.c_int, ctypes.c_int]
     start_time = time.time()
     #with wurlitzer.sys_pipes():
-    lib.getG2Correlations(ctypes_file_list, num_files, int_max_time, int_bin_width, int_pulse_spacing, max_pulse_distance, numer_list, ctypes.byref(denom_ctypes),calc_norm,4,4)
+    lib.getG2Correlations(ctypes_file_list, num_files, int_max_time, int_bin_width, int_pulse_spacing, max_pulse_distance, numer_list, ctypes.byref(denom_ctypes),calc_norm,32,1)
     print("Finished in " + str(time.time()-start_time) + "s")
     time.sleep(1)
     if os.name == 'nt':
